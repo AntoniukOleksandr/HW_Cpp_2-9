@@ -1,0 +1,29 @@
+Завдання: Написати власну реалізцію програми з використанням опертора goto.
+
+//напишемо аналогічну минулому завданню программу, але використовуючи оператор goto
+
+#include <iostream>
+using namespace std;
+int main() {
+    double NUM;
+
+    input:
+    cout << "введіть число: ";
+    cin >> NUM;
+
+    if (NUM == 0) {
+        cout << "підсумок ділення: 0, адже на 0 ділити не можна!" <<endl;
+        goto input;
+    } else {
+        for (int i = -10; i <= 10; i++) {
+            if (i == 0) {
+                continue;
+            }
+            double result = NUM / i;
+            cout << NUM << "/" << i << "=" << result <<endl;
+        }
+    }
+
+    return 0;
+}
+    
